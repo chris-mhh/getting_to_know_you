@@ -2,7 +2,7 @@ from datetime import datetime
 date_format = '%m/%d/%Y'
 today = datetime.today().strftime('%m/%d/%Y')
 student = input('What\'s your name?')
-bcn = input('Are you in Barcelona? (please answer with yes or no)')
+ibcn = input('Are you in Barcelona? (please answer with yes or no)')
 
 if bcn == 'yes':
 	arrival = input('What day did you arrive in Barcelona? (please answer as mm/dd/yyyy)')
@@ -24,5 +24,4 @@ with open('student_arrival.txt', 'a') as file:
 		else:
 			print(f'Welcome to Barcelona, {student}. We hope you are enjoying the first few days.', file=file)
 	else:
-		print('We hope to see you soon', file = file)	
-
+		print(f'{student}, we hope to see you soon', file = file)
